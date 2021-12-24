@@ -81,7 +81,7 @@ for(let i = 0; i < 75; i++){
     points.push(new Point());
 }
 
-canvas.addEventListener("mousemove", event => {
+document.addEventListener("mousemove", event => {
     cursorPoint.x = event.clientX;
     cursorPoint.y = event.clientY;
 });
