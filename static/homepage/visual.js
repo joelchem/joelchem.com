@@ -11,7 +11,7 @@ class Point {
   
       this.radius = 5;
       this.color = "white"
-      this.maxLineShowDist = Math.max(canvas.width/8, canvas.height/8);
+      this.maxLineShowDist = Math.max(canvas.width/6, canvas.height/6);
     }
     draw(){
       this.x += this.vx;
@@ -77,7 +77,7 @@ canvasResize();
 let points = [];
 let cursorPoint = new Point();
 
-for(let i = 0; i < 75; i++){
+for(let i = 0; i < 50; i++){
     points.push(new Point());
 }
 

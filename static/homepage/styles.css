@@ -20,11 +20,22 @@ body {
 }
 #bannerContent {
     background-color: rgb(12, 12, 12);
-    border-radius: 25px;
+    border-radius: 35px;
 }
 #bannerContent h1 {
     font-family: "Archivo", sans-serif;
-    font-size: 50px;
+    font-size: 70px;
     color: white;
     margin: 0.5em;
+    margin-bottom: 0.1em;
+}
+#bannerContent p {
+    color: rgb(255, 166, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    padding-left: 35px;
+    margin-top: 0;
+}
+#titles {
+    color: white;
 }
