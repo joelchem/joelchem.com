@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>Page Under Construction</title>
-
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'homepage/styles.css')}}">
     </head>
     <body>
-        <h1>Welcome!</h1>
-        <p>joelchem.com is currently under construction.</p>
+        <canvas id="screen"></canvas>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'homepage/visual.js')}}"></script>
+
     </body>
 </html>
