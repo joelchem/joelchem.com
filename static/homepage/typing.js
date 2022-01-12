@@ -20,7 +20,7 @@ async function doTypingLoop() {
     let aspiring = [ 
         "bot dev",
         "web dev",
-        "software dev", 
+        "data scientist", 
     ];
     let titleSpan = document.getElementById("titles");
     while(true){
