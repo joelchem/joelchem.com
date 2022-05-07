@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import notes
 
 app = Flask(__name__)
 debug = True
@@ -7,14 +6,6 @@ debug = True
 def index():
     return render_template("index.html")
 
-@app.route('/blocks')
-def blocks():
-    return render_template('blocks.html')
-
-@app.route("/notes/<title>")
-def notesFile(title):
-    content, title = notes.getNote(title=title)
-    return render_template('notes/notesBase.html', notes=content, noteName=title)
 
 
 if __name__ == "__main__":

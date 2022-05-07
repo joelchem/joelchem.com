@@ -7,6 +7,7 @@
 html {
     margin: 0;
     padding: 0;
+    background-color: rgb(25, 25, 25);
 }
 body {
     margin: 0;
@@ -38,4 +39,25 @@ body {
 }
 #titles {
     color: white;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    #bannerContent {
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        
+    }
+    #bannerContent h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    #bannerContent p {
+        color: rgb(255, 166, 0);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        padding-left: 30px;
+        margin-top: 0;
+    }
 }
