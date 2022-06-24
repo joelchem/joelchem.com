@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 
+from music import music_auth
+
 app = Flask(__name__)
+app.register_blueprint(music_auth)
 debug = True
 @app.route('/')
 def index():
