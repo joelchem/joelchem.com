@@ -1,11 +1,18 @@
 from flask import Blueprint, redirect, request
 import requests
+import gspread
 
 from urllib.parse import urlencode
 import json
 import base64
+import time
 
 music_auth = Blueprint('music_auth', __name__)
+
+# totally not using a google spreadsheet to store keys....
+gc = gspread.service_account(filename='google_service_account.json')
+db = gc.open("MusicBackendDatabase")
+auth_db = db.worksheet("SpotifyAuth")
 
 with open("secrets.json") as f:
     secrets = json.load(f)
@@ -58,6 +65,23 @@ def callback():
     post_response = requests.post(token_url,headers=headers,data=body)
 
     # implement database things
+    local = auth_db.get_values("A2:D1000")
+    entry = [
+        state, 
+        post_response.json()["access_token"], 
+        post_response.json()["refresh_token"],
+        int(post_response.json()["expires_in"])+int(time.time())
+    ]
+    added = False
+    for i,row in enumerate(local):
+        if row[0] == state:
+            local[i] = entry
+            added = True
+            break
+    if not added:
+        local.append(entry)
+    
+    auth_db.update("A2:D1000", local)
 
     return "<h1>Success!</h1>"
 
