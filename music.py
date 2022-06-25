@@ -83,5 +83,5 @@ def callback():
     
     auth_db.update("A2:D1000", local)
 
-    return "<h1>Success!</h1>"
+    return f"<h1>Success!</h1><p>You can now use Spotify commands on the bot.</p><br><p><i>*You may close this site</i></p>"
 
