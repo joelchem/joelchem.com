@@ -81,7 +81,7 @@ def callback():
     if not added:
         local.append(entry)
     
-    auth_db.update("A2:D1000", local)
+    auth_db.update("A2:D1000", local, value_input_option="USER_ENTERED")
 
     return f"<h1>Success!</h1><p>You can now use Spotify commands on the bot.</p><br><p><i>*You may close this site</i></p>"
 
