@@ -16,7 +16,7 @@ async function blinkCursor(amt, delay=450) {
 }
 
 async function doTypingLoop() {
-    let hs = "umd cs student";
+    let hs = "cs @ umd";
     let aspiring = [ 
         "full stack developer",
         "systems engineer",
