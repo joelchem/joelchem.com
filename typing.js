@@ -16,11 +16,11 @@ async function blinkCursor(amt, delay=450) {
 }
 
 async function doTypingLoop() {
-    let hs = "high-schooler";
+    let hs = "umd cs student";
     let aspiring = [ 
-        "bot dev",
-        "web dev",
-        "data scientist", 
+        "full stack developer",
+        "systems engineer",
+        "security engineer", 
     ];
     let titleSpan = document.getElementById("titles");
     while(true){
